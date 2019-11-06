@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BubbleImageView">
+        <attr name="bubble_angleRadius" format="dimension|reference" />
+        <attr name="bubble_cursorWidth" format="dimension|reference" />
+        <attr name="bubble_cursorHeight" format="dimension|reference" />
+        <attr name="bubble_borderSize" format="dimension|reference" />
+        <attr name="bubble_borderColor" format="color" />
+        <attr name="bubble_isBorder" format="boolean" />
+
+        <attr name="bubble_cursorLocation" format="enum">
+            <enum name="left_top" value="0" />
+            <enum name="left_bottom" value="1" />
+            <enum name="right_top" value="2" />
+            <enum name="right_bottom" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
