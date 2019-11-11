@@ -14,6 +14,10 @@ public abstract class BaseAct extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initStatusBar();
+    }
+
+    protected void initStatusBar() {
         StatusBarUtil.immersive(this);
     }
 }

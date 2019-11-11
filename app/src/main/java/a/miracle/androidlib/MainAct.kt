@@ -3,19 +3,17 @@ package a.miracle.androidlib
 import a.miracle.androidlib.base.BaseAct
 import a.miracle.androidlib.base.RBaseAdapter
 import a.miracle.androidlib.base.RViewHolder
-import a.miracle.lib_utils.StatusBarUtil
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.act_main.*
 import kotlinx.android.synthetic.main.v_toolbar.*
-import java.util.*
 import kotlin.collections.LinkedHashMap
 
-class MainActivity : BaseAct() {
+class MainAct : BaseAct() {
 
     private var mMap = LinkedHashMap<String, Int>()
 
@@ -27,7 +25,7 @@ class MainActivity : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.act_main)
 
         iv_back.visibility = View.GONE
 
