@@ -1,2 +1,2 @@
-include ':app', ':lib-widget'
+include ':app', ':lib-widget', ':lib-utils'
 rootProject.name='AndroidLib'

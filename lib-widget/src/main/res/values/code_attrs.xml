@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CodeView">
+        <attr name="cvLength" format="integer" />
+        <attr name="cvPadding" format="dimension" />
+        <attr name="cvSize" format="dimension" />
+        <attr name="cvBorderColor" format="color" />
+        <attr name="cvBorderWidth" format="dimension" />
+        <attr name="cvIsCursorEnable" format="boolean" />
+        <attr name="cvIsCipherEnable" format="boolean" />
+        <attr name="cvCursorColor" format="color" />
+        <attr name="cvTextSize" format="dimension" />
+        <attr name="cvTextColor" format="color" />
+    </declare-styleable>
+</resources>
