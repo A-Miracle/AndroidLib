@@ -1,8 +1,10 @@
-package a.miracle.androidlib
+package a.miracle.androidlib.act
 
+import a.miracle.androidlib.R
 import a.miracle.androidlib.base.BaseAct
 import a.miracle.androidlib.base.RBaseAdapter
 import a.miracle.androidlib.base.RViewHolder
+import a.miracle.androidlib.dialog.ZoomViewPagerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,12 +17,18 @@ import kotlin.collections.LinkedHashMap
 
 class MainAct : BaseAct() {
 
+    private val Zoom_View_Pager: Int = 1
+    val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
+        ZoomViewPagerDialog(this)
+    }
+
     private var mMap = LinkedHashMap<String, Int>()
 
     init {
         mMap["BubbleImageView"] = R.layout.view_bubble
         mMap["RulerView"] = R.layout.view_ruler
         mMap["CodeView"] = R.layout.view_code
+        mMap["ZoomViewPager"] = Zoom_View_Pager
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,14 +46,22 @@ class MainAct : BaseAct() {
         }
         adapter.setOnItemClickListener { parent, holder, view, position ->
             val key = adapter.data[position]
+            mMap[key]?.let {
+                when (it) {
+                    Zoom_View_Pager -> {
+                        zoomViewPagerDialog.show()
+                    }
+                    else -> {
+                        val bundle = Bundle()
+                        bundle.putString(DemoAct.EXTRA_TITLE, key)
+                        bundle.putInt(DemoAct.EXTRA_LAYOUT_ID, it)
+                        val intent = Intent(this, DemoAct::class.java)
+                        intent.putExtras(bundle)
 
-            val bundle = Bundle()
-            bundle.putString(DemoAct.EXTRA_TITLE, key)
-            mMap[key]?.let { bundle.putInt(DemoAct.EXTRA_LAYOUT_ID, it) }
-            val intent = Intent(this, DemoAct::class.java)
-            intent.putExtras(bundle)
-
-            startActivity(intent)
+                        startActivity(intent)
+                    }
+                }
+            }
         }
         recyclerView.adapter = adapter
     }

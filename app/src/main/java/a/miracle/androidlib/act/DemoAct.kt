@@ -1,7 +1,7 @@
-package a.miracle.androidlib
+package a.miracle.androidlib.act
 
+import a.miracle.androidlib.R
 import a.miracle.androidlib.base.BaseAct
-import a.miracle.androidlib.base.BaseFrg
 import android.os.Bundle
 import kotlinx.android.synthetic.main.v_toolbar.*
 

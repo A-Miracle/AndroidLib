@@ -1,5 +1,6 @@
-package a.miracle.androidlib
+package a.miracle.androidlib.act
 
+import a.miracle.androidlib.R
 import android.os.Bundle
 
 import a.miracle.androidlib.base.BaseAct

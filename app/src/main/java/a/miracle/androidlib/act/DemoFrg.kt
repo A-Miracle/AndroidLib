@@ -1,4 +1,4 @@
-package a.miracle.androidlib
+package a.miracle.androidlib.act
 
 import android.os.Bundle
 import android.view.View

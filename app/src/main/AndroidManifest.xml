@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashAct"
+        <activity android:name=".act.SplashAct"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainAct"/>
-        <activity android:name=".DemoAct" />
+        <activity android:name=".act.MainAct"/>
+        <activity android:name=".act.DemoAct" />
     </application>
 
 </manifest>
