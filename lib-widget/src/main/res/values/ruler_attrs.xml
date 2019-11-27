@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="RulerView">
-        <attr name="textColor" format="color" />
-        <attr name="textSize" format="dimension" />
-        <attr name="lineColor" format="color" />
-        <attr name="lineSpaceWidth" format="dimension" />
-        <attr name="lineWidth" format="dimension" />
-        <attr name="lineMaxHeight" format="dimension" />
-        <attr name="lineMidHeight" format="dimension" />
-        <attr name="lineMinHeight" format="dimension" />
-        <attr name="textMarginTop" format="dimension" />
-        <attr name="alphaEnable" format="boolean" />
-        <attr name="minValue" format="float" />
-        <attr name="maxValue" format="float" />
-        <attr name="selectorValue" format="float" />
-        <attr name="unitValue" format="float" />
+        <attr name="rl_textColor" format="color" />
+        <attr name="rl_textSize" format="dimension" />
+        <attr name="rl_lineColor" format="color" />
+        <attr name="rl_lineSpaceWidth" format="dimension" />
+        <attr name="rl_lineWidth" format="dimension" />
+        <attr name="rl_lineMaxHeight" format="dimension" />
+        <attr name="rl_lineMidHeight" format="dimension" />
+        <attr name="rl_lineMinHeight" format="dimension" />
+        <attr name="rl_textMarginTop" format="dimension" />
+        <attr name="rl_alphaEnable" format="boolean" />
+        <attr name="rl_minValue" format="float" />
+        <attr name="rl_maxValue" format="float" />
+        <attr name="rl_selectorValue" format="float" />
+        <attr name="rl_unitValue" format="float" />
     </declare-styleable>
 </resources>

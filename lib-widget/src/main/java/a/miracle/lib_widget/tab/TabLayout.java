@@ -61,6 +61,7 @@ import a.miracle.lib_widget.R;
  * <p>
  * Forked from Google Samples &gt; SlidingTabsBasic &gt;
  * <a href="https://developer.android.com/samples/SlidingTabsBasic/src/com.example.android.common/view/SlidingTabLayout.html">SlidingTabLayout</a>
+ * 参考 : https://github.com/ogaclejapan/SmartTabLayout
  */
 public class TabLayout extends HorizontalScrollView {
 

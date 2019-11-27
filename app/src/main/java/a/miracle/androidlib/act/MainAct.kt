@@ -18,6 +18,7 @@ import kotlin.collections.LinkedHashMap
 class MainAct : BaseAct() {
 
     private val Zoom_View_Pager: Int = 1
+    private val Tab_Layout: Int = 2
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -29,6 +30,7 @@ class MainAct : BaseAct() {
         mMap["RulerView"] = R.layout.view_ruler
         mMap["CodeView"] = R.layout.view_code
         mMap["ZoomViewPager"] = Zoom_View_Pager
+        mMap["TabLayout"] = Tab_Layout
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +52,9 @@ class MainAct : BaseAct() {
                 when (it) {
                     Zoom_View_Pager -> {
                         zoomViewPagerDialog.show()
+                    }
+                    Tab_Layout -> {
+                        startActivity(Intent(this, TabAct::class.java))
                     }
                     else -> {
                         val bundle = Bundle()

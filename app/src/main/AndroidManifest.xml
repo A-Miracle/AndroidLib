@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".act.MainAct"/>
         <activity android:name=".act.DemoAct" />
+        <activity android:name=".act.TabAct" />
     </application>
 
 </manifest>

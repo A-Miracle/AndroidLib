@@ -43,4 +43,7 @@ dependencies {
 
     //util
     implementation 'com.blankj:utilcodex:1.25.9'
+
+    //弹窗
+    implementation project(':popwindow')
 }

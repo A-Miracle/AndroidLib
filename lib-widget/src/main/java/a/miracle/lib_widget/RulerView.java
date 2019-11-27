@@ -70,36 +70,36 @@ public class RulerView extends View {
         final TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RulerView);
 
         // 边缘透明
-        mAlphaEnable = typedArray.getBoolean(R.styleable.RulerView_alphaEnable, mAlphaEnable);
+        mAlphaEnable = typedArray.getBoolean(R.styleable.RulerView_rl_alphaEnable, mAlphaEnable);
 
         // 刻度线条之间间隙
-        mLineSpaceWidth = typedArray.getDimension(R.styleable.RulerView_lineSpaceWidth, mLineSpaceWidth);
+        mLineSpaceWidth = typedArray.getDimension(R.styleable.RulerView_rl_lineSpaceWidth, mLineSpaceWidth);
         // 线条粗细
-        mLineWidth = typedArray.getDimension(R.styleable.RulerView_lineWidth, mLineWidth);
+        mLineWidth = typedArray.getDimension(R.styleable.RulerView_rl_lineWidth, mLineWidth);
         // 10号线
-        mLineMaxHeight = typedArray.getDimension(R.styleable.RulerView_lineMaxHeight, mLineMaxHeight);
+        mLineMaxHeight = typedArray.getDimension(R.styleable.RulerView_rl_lineMaxHeight, mLineMaxHeight);
         // 5号线
-        mLineMidHeight = typedArray.getDimension(R.styleable.RulerView_lineMidHeight, mLineMidHeight);
+        mLineMidHeight = typedArray.getDimension(R.styleable.RulerView_rl_lineMidHeight, mLineMidHeight);
         // 1号线
-        mLineMinHeight = typedArray.getDimension(R.styleable.RulerView_lineMinHeight, mLineMinHeight);
+        mLineMinHeight = typedArray.getDimension(R.styleable.RulerView_rl_lineMinHeight, mLineMinHeight);
         // 线条颜色
-        mLineColor = typedArray.getColor(R.styleable.RulerView_lineColor, mLineColor);
+        mLineColor = typedArray.getColor(R.styleable.RulerView_rl_lineColor, mLineColor);
 
         // 标注字体大小
-        mTextSize = typedArray.getDimension(R.styleable.RulerView_textSize,  mTextSize);
+        mTextSize = typedArray.getDimension(R.styleable.RulerView_rl_textSize,  mTextSize);
         // 标注颜色
-        mTextColor = typedArray.getColor(R.styleable.RulerView_textColor, mTextColor);
+        mTextColor = typedArray.getColor(R.styleable.RulerView_rl_textColor, mTextColor);
         // 标注顶部top
-        mTextMarginTop = typedArray.getDimension(R.styleable.RulerView_textMarginTop, mTextMarginTop);
+        mTextMarginTop = typedArray.getDimension(R.styleable.RulerView_rl_textMarginTop, mTextMarginTop);
 
         // 当前中刻度
-        mSelectorValue = typedArray.getFloat(R.styleable.RulerView_selectorValue, mSelectorValue);
+        mSelectorValue = typedArray.getFloat(R.styleable.RulerView_rl_selectorValue, mSelectorValue);
         // 刻度最小值
-        mMinValue = typedArray.getFloat(R.styleable.RulerView_minValue, mMinValue);
+        mMinValue = typedArray.getFloat(R.styleable.RulerView_rl_minValue, mMinValue);
         // 刻度最大值
-        mMaxValue = typedArray.getFloat(R.styleable.RulerView_maxValue, mMaxValue);
+        mMaxValue = typedArray.getFloat(R.styleable.RulerView_rl_maxValue, mMaxValue);
         // 最小单位, 0.1, 1
-        mUnitValue = typedArray.getFloat(R.styleable.RulerView_unitValue, mUnitValue);
+        mUnitValue = typedArray.getFloat(R.styleable.RulerView_rl_unitValue, mUnitValue);
 
         typedArray.recycle();
 

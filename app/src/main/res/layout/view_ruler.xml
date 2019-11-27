@@ -19,24 +19,22 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <a.miracle.lib_widget.RulerView
-        app:lineColor="@color/colorAccent"
-        app:textColor="@color/colorPrimary"
-        app:unitValue="0.1"
+        app:rl_lineColor="@color/colorAccent"
+        app:rl_textColor="@color/colorPrimary"
+        app:rl_unitValue="0.1"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        app:bubble_cursorLocation="left_top"
         app:layout_constraintBottom_toBottomOf="@id/gl_h"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <a.miracle.lib_widget.RulerView
-        app:lineColor="@color/colorPrimary"
-        app:textColor="@color/colorAccent"
-        app:unitValue="1"
+        app:rl_lineColor="@color/colorPrimary"
+        app:rl_textColor="@color/colorAccent"
+        app:rl_unitValue="1"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        app:bubble_cursorLocation="left_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

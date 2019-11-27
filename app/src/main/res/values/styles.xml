@@ -14,5 +14,8 @@
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
-
+    <style name="recyclerview_style">
+        <item name="android:scrollbars">none</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
 </resources>

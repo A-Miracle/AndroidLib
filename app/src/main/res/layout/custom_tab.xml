@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<a.miracle.androidlib.widget.TabTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_text"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:gravity="center"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:textColor="@color/custom_tab"
+    android:textSize="18sp"/>
