@@ -19,6 +19,7 @@ class MainAct : BaseAct() {
 
     private val Zoom_View_Pager: Int = 1
     private val Tab_Layout: Int = 2
+    private val Path_Anim: Int = 3
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -31,6 +32,7 @@ class MainAct : BaseAct() {
         mMap["CodeView"] = R.layout.view_code
         mMap["ZoomViewPager"] = Zoom_View_Pager
         mMap["TabLayout"] = Tab_Layout
+        mMap["PathAnim"] = Path_Anim
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +57,9 @@ class MainAct : BaseAct() {
                     }
                     Tab_Layout -> {
                         startActivity(Intent(this, TabAct::class.java))
+                    }
+                    Path_Anim -> {
+                        startActivity(Intent(this, PathAnimAct::class.java))
                     }
                     else -> {
                         val bundle = Bundle()

@@ -22,6 +22,7 @@
         <activity android:name=".act.MainAct"/>
         <activity android:name=".act.DemoAct" />
         <activity android:name=".act.TabAct" />
+        <activity android:name=".act.PathAnimAct" />
     </application>
 
 </manifest>
