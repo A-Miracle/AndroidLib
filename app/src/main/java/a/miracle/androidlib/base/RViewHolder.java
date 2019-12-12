@@ -18,8 +18,6 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 
-import a.miracle.androidlib.App;
-
 /**
  * Created by c.tao on 2019/10/21
  */
@@ -33,7 +31,7 @@ public class RViewHolder extends RecyclerView.ViewHolder {
     }
 
     public RViewHolder(@LayoutRes int layoutId, ViewGroup parent) {
-        super(LayoutInflater.from(App.get()).inflate(layoutId, parent, false));
+        super(LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false));
         mViews = new SparseArray<>();
     }
 

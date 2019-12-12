@@ -8,6 +8,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +30,12 @@ public class PathAnimAct extends BaseAct implements View.OnClickListener {
     private List<AnimatorPath> mPaths;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_path_anim);
+    protected int getLayoutId() {
+        return R.layout.act_path_anim;
+    }
+
+    @Override
+    protected void onAfterSetContentLayout(Bundle savedInstanceState) {
         FrameLayout fl_root = findViewById(R.id.fl_content);
         findViewById(R.id.pathView).setOnClickListener(this);
         findViewById(R.id.iv_back).setOnClickListener(this);

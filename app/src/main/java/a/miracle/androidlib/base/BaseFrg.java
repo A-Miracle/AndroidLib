@@ -13,10 +13,10 @@ import androidx.fragment.app.Fragment;
 import a.miracle.lib_utils.ViewUtils;
 
 /**
- * Created by c.tao on 2019/11/11
+ * Created by c.tao on 2019/11/5
  */
 public abstract class BaseFrg extends Fragment {
-    protected BaseAct activity;
+    private BaseAct activity;
     protected View rootView;
 
     @Override
@@ -25,30 +25,31 @@ public abstract class BaseFrg extends Fragment {
         super.onAttach(context);
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (rootView == null){
+        if (rootView == null) {
             rootView = createView();
-            if(rootView == null){
+            if (rootView == null) {
                 rootView = inflater.inflate(getLayoutId(), null, false);
             }
-        }else{
+        } else {
             ViewUtils.removeSelfFromParent(rootView);
         }
         return rootView;
     }
 
-    /**获取 Layout Id*/
+    /**
+     * 获取 Layout Id
+     */
     protected abstract int getLayoutId();
 
-    /**获取视图返回View*/
-    protected View createView(){ return null; }
+    /**
+     * 获取视图返回View
+     */
+    protected View createView() {
+        return null;
+    }
 
     @Override
     public abstract void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState);

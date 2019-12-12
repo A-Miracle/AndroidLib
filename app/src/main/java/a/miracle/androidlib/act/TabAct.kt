@@ -21,6 +21,10 @@ import java.util.*
  * Created by c.tao on 2019/11/22
  */
 class TabAct : BaseAct() {
+    override fun getLayoutId(): Int {
+        return R.layout.act_tab
+    }
+
     var mCurrentTab: Int = 0
     private lateinit var mAdapter: ItemAdapter
 
@@ -28,9 +32,7 @@ class TabAct : BaseAct() {
         return mCurrentTab
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.act_tab)
+    override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
         tv_title.text = "TabLayout"
         iv_back.setOnClickListener { finish() }
         iv_more.setOnClickListener {

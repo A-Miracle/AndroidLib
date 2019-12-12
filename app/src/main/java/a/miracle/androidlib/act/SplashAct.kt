@@ -11,13 +11,14 @@ import kotlinx.android.synthetic.main.act_splash.*
  * Created by c.tao on 2019/11/11
  */
 class SplashAct : BaseAct() {
+    override fun getLayoutId(): Int {
+        return R.layout.act_splash
+    }
 
     override fun initStatusBar() {
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.act_splash)
+    override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
         iv_icon.postDelayed({
             startActivity(Intent(this, MainAct::class.java))
             finish()

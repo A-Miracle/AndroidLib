@@ -16,6 +16,9 @@ import kotlinx.android.synthetic.main.v_toolbar.*
 import kotlin.collections.LinkedHashMap
 
 class MainAct : BaseAct() {
+    override fun getLayoutId(): Int {
+        return R.layout.act_main
+    }
 
     private val Zoom_View_Pager: Int = 1
     private val Tab_Layout: Int = 2
@@ -35,10 +38,7 @@ class MainAct : BaseAct() {
         mMap["PathAnim"] = Path_Anim
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.act_main)
-
+    override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
         iv_back.visibility = View.GONE
 
         val keys = mMap.keys

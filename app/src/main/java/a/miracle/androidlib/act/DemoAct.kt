@@ -9,13 +9,16 @@ import kotlinx.android.synthetic.main.v_toolbar.*
  * Created by c.tao on 2019/11/8
  */
 class DemoAct : BaseAct() {
+    override fun getLayoutId(): Int {
+        return R.layout.act_demo
+    }
+
     companion object {
         val EXTRA_TITLE = "EXTRA_TITLE"
         val EXTRA_LAYOUT_ID = "EXTRA_LAYOUT_ID"
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
         setContentView(R.layout.act_demo)
 
         tv_title.text = intent.getStringExtra(EXTRA_TITLE)
