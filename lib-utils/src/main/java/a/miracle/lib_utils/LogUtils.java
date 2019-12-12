@@ -12,13 +12,13 @@ import com.orhanobut.logger.PrettyFormatStrategy;
  * Created by A Miracle on 2016/9/19.
  */
 public class LogUtils {
-    public static String LOG_TAG = "Nomnom Store";
+    public static String LOG_TAG = "Android Lib";
     public static boolean LOG_DEBUG = BuildConfig.DEBUG;
 
     /**
      * 初始化Log
      */
-    public static void init(){
+    static{
         // 日志输出配置
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder().tag(LOG_TAG).build();
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy){
