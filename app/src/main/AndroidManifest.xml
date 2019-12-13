@@ -24,6 +24,7 @@
         <activity android:name=".act.TabAct" />
         <activity android:name=".act.PathAnimAct" />
         <activity android:name=".act.ScanAct" />
+        <activity android:name=".widget.exp.simple.TestAct" />
     </application>
 
 </manifest>

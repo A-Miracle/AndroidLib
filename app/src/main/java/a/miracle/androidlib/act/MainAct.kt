@@ -5,14 +5,12 @@ import a.miracle.androidlib.base.BaseAct
 import a.miracle.androidlib.base.RBaseAdapter
 import a.miracle.androidlib.base.RViewHolder
 import a.miracle.androidlib.dialog.ZoomViewPagerDialog
-import android.Manifest
+import a.miracle.androidlib.widget.exp.simple.TestAct
 import android.content.Intent
-import android.location.LocationManager
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blankj.utilcode.constant.PermissionConstants
 import com.blankj.utilcode.util.PermissionUtils
@@ -29,6 +27,7 @@ class MainAct : BaseAct() {
     private val Tab_Layout: Int = 2
     private val Path_Anim: Int = 3
     private val Zxing: Int = 4
+    private val Exp_RecyclerView: Int = 5
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -43,6 +42,7 @@ class MainAct : BaseAct() {
         mMap["TabLayout"] = Tab_Layout
         mMap["PathAnim"] = Path_Anim
         mMap["Zxing"] = Zxing
+        mMap["ExpRecyclerView"] = Exp_RecyclerView
     }
 
     override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
@@ -87,6 +87,9 @@ class MainAct : BaseAct() {
                                 }
                             }
                         ).request()
+                    }
+                    Exp_RecyclerView -> {
+                        startActivity(Intent(this, TestAct::class.java))
                     }
                     else -> {
                         val bundle = Bundle()
