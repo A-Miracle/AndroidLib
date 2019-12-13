@@ -10,7 +10,7 @@
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/bg_toolbar"
+        android:background="@drawable/bg_toolbar_reverse"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

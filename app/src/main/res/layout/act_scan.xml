@@ -14,7 +14,7 @@
         android:id="@+id/v_bottom"
         android:layout_width="match_parent"
         android:layout_height="49dp"
-        android:background="@drawable/bg_toolbar_reverse"
+        android:background="@drawable/bg_toolbar"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <FrameLayout
