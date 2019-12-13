@@ -20,6 +20,9 @@ class ZoomViewPagerDialog(val mContext: Context) : BottomSheetDialog(mContext) {
     }
 
     private fun init() {
+        setCancelable(false)
+        setCanceledOnTouchOutside(false)
+
         val view = LayoutInflater.from(mContext).inflate(R.layout.dialog_zoom_view_pager, null)
         setContentView(view)
         iv_close.setOnClickListener { dismiss() }

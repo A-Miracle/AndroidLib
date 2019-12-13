@@ -23,6 +23,7 @@
         <activity android:name=".act.DemoAct" />
         <activity android:name=".act.TabAct" />
         <activity android:name=".act.PathAnimAct" />
+        <activity android:name=".act.ScanAct" />
     </application>
 
 </manifest>

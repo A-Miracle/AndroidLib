@@ -5,12 +5,17 @@ import a.miracle.androidlib.base.BaseAct
 import a.miracle.androidlib.base.RBaseAdapter
 import a.miracle.androidlib.base.RViewHolder
 import a.miracle.androidlib.dialog.ZoomViewPagerDialog
+import android.Manifest
 import android.content.Intent
+import android.location.LocationManager
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.blankj.utilcode.constant.PermissionConstants
+import com.blankj.utilcode.util.PermissionUtils
 import kotlinx.android.synthetic.main.act_main.*
 import kotlinx.android.synthetic.main.v_toolbar.*
 import kotlin.collections.LinkedHashMap
@@ -23,6 +28,7 @@ class MainAct : BaseAct() {
     private val Zoom_View_Pager: Int = 1
     private val Tab_Layout: Int = 2
     private val Path_Anim: Int = 3
+    private val Zxing: Int = 4
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -36,6 +42,7 @@ class MainAct : BaseAct() {
         mMap["ZoomViewPager"] = Zoom_View_Pager
         mMap["TabLayout"] = Tab_Layout
         mMap["PathAnim"] = Path_Anim
+        mMap["Zxing"] = Zxing
     }
 
     override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
@@ -60,6 +67,26 @@ class MainAct : BaseAct() {
                     }
                     Path_Anim -> {
                         startActivity(Intent(this, PathAnimAct::class.java))
+                    }
+                    Zxing -> {
+                        PermissionUtils.permission(PermissionConstants.CAMERA).callback(
+                            object : PermissionUtils.FullCallback {
+                                override fun onGranted(permissionsGranted: MutableList<String>?) {
+                                    startActivity(Intent(applicationContext, ScanAct::class.java))
+                                }
+
+                                override fun onDenied(
+                                    permissionsDeniedForever: MutableList<String>?,
+                                    permissionsDenied: MutableList<String>?
+                                ) {
+                                    if (permissionsDeniedForever != null) {
+                                        // denied forever
+                                    } else {
+                                        // denied
+                                    }
+                                }
+                            }
+                        ).request()
                     }
                     else -> {
                         val bundle = Bundle()

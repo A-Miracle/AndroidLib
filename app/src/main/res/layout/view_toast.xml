@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:padding="0dp"
+    android:background="@null"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="0dp"
+    app:contentPadding="0dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#A2000000"
+    app:cardCornerRadius="5dp">
+
+    <TextView
+        tools:text="Insufficient Stock."
+        android:textSize="15sp"
+        android:id="@+id/tv_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingLeft="39dp"
+        android:paddingRight="39dp"
+        android:paddingTop="15dp"
+        android:shadowColor="#BB000000"
+        android:shadowRadius="2.75"
+        android:textColor="#FFFFFFFF" />
+</androidx.cardview.widget.CardView>

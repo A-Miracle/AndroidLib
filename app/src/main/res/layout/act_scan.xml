@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act.ScanAct">
+
+    <include
+        android:id="@+id/v_appbar"
+        layout="@layout/v_toolbar" />
+
+    <View
+        android:id="@+id/v_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/bg_toolbar_reverse"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/v_bottom"
+        app:layout_constraintTop_toBottomOf="@id/v_appbar">
+
+        <include layout="@layout/act_qr_scan" />
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_y_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/ib_hot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:elevation="15dp"
+        android:gravity="center"
+        android:src="@drawable/sel_hot"
+        app:layout_constraintBottom_toBottomOf="@id/v_bottom"
+        app:layout_constraintLeft_toLeftOf="@id/v_bottom"
+        app:layout_constraintRight_toLeftOf="@id/ib_scan"
+        app:layout_constraintTop_toTopOf="@id/v_bottom" />
+
+    <ImageButton
+        android:id="@+id/ib_scan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:elevation="15dp"
+        android:src="@drawable/sel_scan"
+        app:layout_constraintBottom_toBottomOf="@id/v_bottom"
+        app:layout_constraintLeft_toRightOf="@id/ib_hot"
+        app:layout_constraintRight_toLeftOf="@id/ib_order"
+        app:layout_constraintTop_toTopOf="@id/v_bottom" />
+
+    <ImageButton
+        android:id="@+id/ib_order"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:elevation="15dp"
+        android:gravity="center"
+        android:src="@drawable/sel_order"
+        app:layout_constraintBottom_toBottomOf="@id/v_bottom"
+        app:layout_constraintLeft_toRightOf="@id/ib_scan"
+        app:layout_constraintRight_toRightOf="@id/v_bottom"
+        app:layout_constraintTop_toTopOf="@id/v_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

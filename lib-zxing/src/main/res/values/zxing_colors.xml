@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 二维码 zxing -->
+    <color name="viewfinder_frame">#FF3699FF</color>
+    <color name="viewfinder_mask">#88000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#88000000</color>
+    <color name="viewfinder_laser">#E9E9E9</color>
+    <!--zxing end-->
+</resources>
