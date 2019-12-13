@@ -55,4 +55,7 @@ dependencies {
 
     //弹窗
     implementation project(path: ':popwindow')
+
+    //SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
 }

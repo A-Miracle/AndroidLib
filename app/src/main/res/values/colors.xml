@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="startColor">#FF0000FF</color>
-    <color name="centerColor">#FF2A99FA</color>
-    <color name="endColor">#FFFFFFFF</color>
+    <color name="startColor">#880000FF</color>
+    <color name="centerColor">#882A99FA</color>
+    <color name="endColor">#88FFFFFF</color>
 
     <color name="colorPrimary">@color/startColor</color>
     <color name="colorPrimaryDark">@color/startColor</color>
