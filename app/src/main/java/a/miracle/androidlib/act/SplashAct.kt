@@ -1,10 +1,9 @@
 package a.miracle.androidlib.act
 
 import a.miracle.androidlib.R
-import android.os.Bundle
-
 import a.miracle.androidlib.base.BaseAct
 import android.content.Intent
+import android.os.Bundle
 import kotlinx.android.synthetic.main.act_splash.*
 
 /**

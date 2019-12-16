@@ -20,11 +20,15 @@ class ZoomViewPagerDialog(val mContext: Context) : BottomSheetDialog(mContext) {
     }
 
     private fun init() {
-        setCancelable(false)
-        setCanceledOnTouchOutside(false)
-
         val view = LayoutInflater.from(mContext).inflate(R.layout.dialog_zoom_view_pager, null)
         setContentView(view)
+
+        // this.behavior.setHideable(cancelable);
+        // 禁止滑动关闭但允许点击背景关闭(此操作比较风骚, 需要看源码才能懂)
+        setCancelable(false)
+        setCanceledOnTouchOutside(true)
+        setCancelable(true)
+
         iv_close.setOnClickListener { dismiss() }
 
         val list = listOf<View>(

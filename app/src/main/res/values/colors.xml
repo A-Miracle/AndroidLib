@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="startColor">#880000FF</color>
-    <color name="centerColor">#882A99FA</color>
-    <color name="endColor">#88FFFFFF</color>
+
+    <color name="s0_startColor">#880000FF</color>
+    <color name="s0_centerColor">#882A99FA</color>
+    <color name="s0_endColor">#88FFFFFF</color>
+
+    <color name="s1_startColor">#3E2D70</color>
+    <color name="s1_centerColor">#594691</color>
+    <color name="s1_endColor">#F4F0FF</color>
+
+    <color name="startColor">@color/s1_startColor</color>
+    <color name="centerColor">@color/s1_centerColor</color>
+    <color name="endColor">@color/s1_endColor</color>
 
     <color name="colorPrimary">@color/startColor</color>
     <color name="colorPrimaryDark">@color/startColor</color>
     <color name="colorAccent">@color/startColor</color>
+
+    <color name="viewfinder_frame">@color/centerColor</color>
 </resources>

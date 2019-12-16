@@ -7,9 +7,15 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.zxing.ResultPoint;
 
@@ -102,6 +108,7 @@ public final class ViewfinderView extends View {
 		if (scan_lineBitmap == null) {
 			scan_lineBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.qr_scan_line);
 			scan_lineBitmap = BitmapUtils.zoomBitmapScale(scan_lineBitmap, (frame.right - frame.left - line_width * 2) * 1.0f / scan_lineBitmap.getWidth(), 1);
+			scan_lineBitmap = tintBitmap(scan_lineBitmap, frameColor);
 		}
 
 		if (path == null) {
@@ -245,4 +252,15 @@ public final class ViewfinderView extends View {
 		possibleResultPoints.add(point);
 	}
 
+	public Bitmap tintBitmap(Bitmap inBitmap , int tintColor) {
+		if (inBitmap == null) {
+			return null;
+		}
+		Bitmap outBitmap = Bitmap.createBitmap (inBitmap.getWidth(), inBitmap.getHeight() , inBitmap.getConfig());
+		Canvas canvas = new Canvas(outBitmap);
+		Paint paint = new Paint();
+		paint.setColorFilter( new PorterDuffColorFilter(tintColor, PorterDuff.Mode.SRC_IN)) ;
+		canvas.drawBitmap(inBitmap , 0, 0, paint) ;
+		return outBitmap ;
+	}
 }

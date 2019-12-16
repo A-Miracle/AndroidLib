@@ -2,11 +2,12 @@ package a.miracle.androidlib.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
+
+import a.miracle.androidlib.R;
 
 import static a.miracle.lib_utils.DisplayUtil.dp2px;
 
@@ -28,7 +29,7 @@ public class PathView extends View {
         // 设置画笔未实心
         paint.setStyle(Paint.Style.STROKE);
         // 设置颜色
-        paint.setColor(Color.parseColor("#FF2A99FA"));
+        paint.setColor(getResources().getColor(R.color.centerColor));
         // 设置画笔宽度
         paint.setStrokeWidth(dp2px(2));
     }

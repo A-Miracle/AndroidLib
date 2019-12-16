@@ -58,4 +58,7 @@ dependencies {
 
     //SmartRefreshLayout
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    //https://github.com/Ramotion/folding-cell-android
+    //implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
 }

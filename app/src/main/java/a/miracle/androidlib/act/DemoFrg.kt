@@ -1,9 +1,8 @@
 package a.miracle.androidlib.act
 
+import a.miracle.androidlib.base.BaseFrg
 import android.os.Bundle
 import android.view.View
-
-import a.miracle.androidlib.base.BaseFrg
 
 /**
  * Created by c.tao on 2019/11/11

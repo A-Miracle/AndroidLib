@@ -16,7 +16,6 @@ import com.blankj.utilcode.constant.PermissionConstants
 import com.blankj.utilcode.util.PermissionUtils
 import kotlinx.android.synthetic.main.act_main.*
 import kotlinx.android.synthetic.main.v_toolbar.*
-import kotlin.collections.LinkedHashMap
 
 class MainAct : BaseAct() {
     override fun getLayoutId(): Int {

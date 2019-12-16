@@ -22,7 +22,7 @@
     <a.miracle.lib_widget.BubbleImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@mipmap/ic_bubble"
+        android:src="@mipmap/background"
         app:bubble_borderColor="@color/colorAccent"
         app:bubble_cursorLocation="left_top"
         app:layout_constraintBottom_toBottomOf="@id/gl_h"
@@ -33,7 +33,7 @@
     <a.miracle.lib_widget.BubbleImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@mipmap/ic_bubble"
+        android:src="@mipmap/background"
         app:bubble_borderColor="@color/colorAccent"
         app:bubble_cursorLocation="right_top"
         app:layout_constraintBottom_toBottomOf="@id/gl_h"
@@ -44,7 +44,7 @@
     <a.miracle.lib_widget.BubbleImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@mipmap/ic_bubble"
+        android:src="@mipmap/background"
         app:bubble_borderColor="@color/colorAccent"
         app:bubble_cursorLocation="left_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,7 @@
     <a.miracle.lib_widget.BubbleImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@mipmap/ic_bubble"
+        android:src="@mipmap/background"
         app:bubble_borderColor="@color/colorAccent"
         app:bubble_cursorLocation="right_bottom"
         app:layout_constraintBottom_toBottomOf="parent"

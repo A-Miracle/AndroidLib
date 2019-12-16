@@ -39,6 +39,8 @@
             android:src="@mipmap/ic_more_open" />
 
         <a.miracle.lib_widget.azlist.AZWaveSideBarView
+            app:hintCircleColor="@color/centerColor"
+            app:waveColor="@color/centerColor"
             android:layout_marginEnd="8dp"
             android:id="@+id/bar_list"
             android:layout_width="match_parent"

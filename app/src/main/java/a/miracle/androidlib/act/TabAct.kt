@@ -44,7 +44,7 @@ class TabAct : BaseAct() {
 
         tabLayout.setTitleNotViewPager(*titles)
         tabLayout.setSelectedIndicatorColors(
-            Color.parseColor("#FFFF2525"),
+            resources.getColor(R.color.colorPrimary),
             Color.parseColor("#FF080808")
         )
 
