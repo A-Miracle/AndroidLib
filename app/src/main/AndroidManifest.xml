@@ -10,7 +10,8 @@
         android:roundIcon="@drawable/ic_splash"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".act.SplashAct"
+        <activity
+            android:name=".act.SplashAct"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,12 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".act.MainAct"/>
+        <activity android:name=".act.MainAct" />
         <activity android:name=".act.DemoAct" />
         <activity android:name=".act.TabAct" />
         <activity android:name=".act.PathAnimAct" />
         <activity android:name=".act.ScanAct" />
         <activity android:name=".widget.exp.simple.TestAct" />
+        <activity android:name=".act.SwipeAct" />
     </application>
 
 </manifest>

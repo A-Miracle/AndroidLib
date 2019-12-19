@@ -27,6 +27,7 @@ class MainAct : BaseAct() {
     private val Path_Anim: Int = 3
     private val Zxing: Int = 4
     private val Exp_RecyclerView: Int = 5
+    private val Swipe_RecyclerView: Int = 6
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -42,6 +43,7 @@ class MainAct : BaseAct() {
         mMap["PathAnim"] = Path_Anim
         mMap["Zxing"] = Zxing
         mMap["ExpRecyclerView"] = Exp_RecyclerView
+        mMap["SwipeRecyclerView"] = Swipe_RecyclerView
     }
 
     override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
@@ -90,6 +92,9 @@ class MainAct : BaseAct() {
                     Exp_RecyclerView -> {
                         startActivity(Intent(this, TestAct::class.java))
                     }
+                    Swipe_RecyclerView -> {
+                        startActivity(Intent(this, SwipeAct::class.java))
+                    }
                     else -> {
                         val bundle = Bundle()
                         bundle.putString(DemoAct.EXTRA_TITLE, key)
@@ -105,7 +110,7 @@ class MainAct : BaseAct() {
         recyclerView.adapter = adapter
     }
 
-    private class MainAdapter : RBaseAdapter<String>() {
+    class MainAdapter : RBaseAdapter<String>() {
         override fun onCreateRViewHolder(parent: ViewGroup?, viewType: Int): RViewHolder {
             return RViewHolder(R.layout.item_main, parent)
         }
