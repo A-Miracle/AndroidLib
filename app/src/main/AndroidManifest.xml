@@ -27,6 +27,7 @@
         <activity android:name=".act.ScanAct" />
         <activity android:name=".widget.exp.simple.TestAct" />
         <activity android:name=".act.SwipeAct" />
+        <activity android:name=".act.NavAct" />
     </application>
 
 </manifest>

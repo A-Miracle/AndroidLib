@@ -28,6 +28,7 @@ class MainAct : BaseAct() {
     private val Zxing: Int = 4
     private val Exp_RecyclerView: Int = 5
     private val Swipe_RecyclerView: Int = 6
+    private val Nav: Int = 7
     val zoomViewPagerDialog: ZoomViewPagerDialog by lazy {
         ZoomViewPagerDialog(this)
     }
@@ -44,6 +45,7 @@ class MainAct : BaseAct() {
         mMap["Zxing"] = Zxing
         mMap["ExpRecyclerView"] = Exp_RecyclerView
         mMap["SwipeRecyclerView"] = Swipe_RecyclerView
+        mMap["Nav"] = Nav
     }
 
     override fun onAfterSetContentLayout(savedInstanceState: Bundle?) {
@@ -94,6 +96,9 @@ class MainAct : BaseAct() {
                     }
                     Swipe_RecyclerView -> {
                         startActivity(Intent(this, SwipeAct::class.java))
+                    }
+                    Nav -> {
+                        startActivity(Intent(this, NavAct::class.java))
                     }
                     else -> {
                         val bundle = Bundle()

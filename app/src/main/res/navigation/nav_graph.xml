@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav1Frg">
+
+    <tab_fragment
+        android:id="@+id/nav1Frg"
+        android:name="a.miracle.androidlib.frg.Nav1Frg"
+        android:label="Nav1Fag">
+        <action
+            android:id="@+id/action_nav1Frg_to_nav2Frg"
+            app:destination="@id/nav2Frg"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/right_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/left_out" />
+    </tab_fragment>
+    <tab_fragment
+        android:id="@+id/nav2Frg"
+        android:name="a.miracle.androidlib.frg.Nav2Frg"
+        android:label="Nav2Fag">
+        <action
+            android:id="@+id/action_nav2Frg_to_nav3Frg"
+            app:destination="@id/nav3Frg"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/right_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/left_out" />
+    </tab_fragment>
+    <tab_fragment
+        android:id="@+id/nav3Frg"
+        android:name="a.miracle.androidlib.frg.Nav3Frg"
+        android:label="Nav3Fag">
+        <action
+            android:id="@+id/action_nav3Frg_to_nav1Frg"
+            app:destination="@id/nav1Frg"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/right_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/left_out" />
+    </tab_fragment>
+</navigation>
