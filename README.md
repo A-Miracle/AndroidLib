@@ -1,4 +1,5 @@
 # AndroidLib
+![image](https://github.com/A-Miracle/AndroidLib/blob/master/demo.gif)
 
 ## 前言
 工作模块板块积累，以及其它优秀开源项目引用。
